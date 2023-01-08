@@ -1,4 +1,10 @@
 
+DROP TABLE IF EXISTS public.transaction  ; 
+DROP TABLE IF EXISTS public.client  ; 
+DROP TABLE IF EXISTS public.nature  ; 
+DROP TABLE IF EXISTS public.type  ; 
+
+
 CREATE TABLE public.nature (
 	code serial4 NOT NULL,
 	libelle varchar NULL,
@@ -16,7 +22,7 @@ CREATE TABLE public."type" (
 
 
 CREATE TABLE public.client (
-	id int4 NOT NULL DEFAULT nextval('type_1_id_seq'::regclass),
+	id int4 NOT NULL ,
 	prenom varchar NULL,
 	nom varchar NULL,
 	CONSTRAINT type_1_pk PRIMARY KEY (id)
