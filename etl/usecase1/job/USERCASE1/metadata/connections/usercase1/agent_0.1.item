@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <TalendMetadata:DatabaseConnection xmi:id="_LV6YcJgWEe2zGceU_LAsCg" name="agent" id="_EQspQJgWEe2zGceU_LAsCg" label="agent" dataPackage="_LWlt4JgWEe2zGceU_LAsCg" DatabaseType="SQLite" DriverClass="org.sqlite.JDBC" URL="jdbc:sqlite://home/abdessamad/project/cours/interoperabilite/2022_2023/tp/user_case1/correction/agent.sqlite" Port="" Username="" Password="" ServerName="" DatasourceName="" FileFieldName="/home/abdessamad/project/cours/interoperabilite/2022_2023/tp/user_case1/correction/agent.sqlite" SID="" SqlSynthax="" StringQuote="" NullChar="" DbmsId="sqlite_id" ProductId="SQLITE" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_LV6YcZgWEe2zGceU_LAsCg" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_LWKQEJgWEe2zGceU_LAsCg" tag="package filter" value=""/>
+    <taggedValue xmi:id="_LWQ9wJgWEe2zGceU_LAsCg" tag="Status" value=""/>
+    <taggedValue xmi:id="_LWQ9wZgWEe2zGceU_LAsCg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_LWQ9wpgWEe2zGceU_LAsCg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_LWQ9w5gWEe2zGceU_LAsCg" tag="Description" value=""/>
+    <taggedValue xmi:id="_LWQ9xJgWEe2zGceU_LAsCg" tag="Author" value=""/>
+    <taggedValue xmi:id="_LWQ9xZgWEe2zGceU_LAsCg" tag="otherParameter"/>
+    <taggedValue xmi:id="_LWdyEJgWEe2zGceU_LAsCg" tag="DB ProductName" value="SQLite"/>
+    <taggedValue xmi:id="_LWdyEZgWEe2zGceU_LAsCg" tag="DB ProductVersion" value="3.6.3"/>
+    <taggedValue xmi:id="_LWdyEpgWEe2zGceU_LAsCg" tag="DB IdentifierQuoteString" value=" "/>
+    <queries xmi:id="_XgwSAJn1Ee2g3OrLdwWcgw">
+      <query xmi:id="_XgwSApn1Ee2g3OrLdwWcgw" id="_XgwSAZn1Ee2g3OrLdwWcgw" label="conducteur" value="select * from AGENT where fonction = 'Conducteur'"/>
+    </queries>
+    <parameters xmi:id="_LV6YcpgWEe2zGceU_LAsCg" key="CONN_PARA_KEY_USERNAME" value=""/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_LWlt4JgWEe2zGceU_LAsCg" name=" " dataManager="_LV6YcJgWEe2zGceU_LAsCg">
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_NzGMkJgWEe2zGceU_LAsCg" name="AGENT" id="_NzE-cJgWEe2zGceU_LAsCg" label="AGENT" tableType="TABLE">
+      <feature xsi:type="relational:TdColumn" xmi:id="_NzGMkZgWEe2zGceU_LAsCg" name="id_agent" label="id_agent" length="2000000000" precision="10" sourceType="INT" talendType="id_Integer" nullable="false">
+        <taggedValue xmi:id="_NzGMkpgWEe2zGceU_LAsCg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_NzGMk5gWEe2zGceU_LAsCg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_NzGMlJgWEe2zGceU_LAsCg" name="INT" numericPrecision="10" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_NzGMlZgWEe2zGceU_LAsCg" name="anne_recrutement" label="anne_recrutement" length="2000000000" precision="10" sourceType="INT" talendType="id_Integer" nullable="false">
+        <taggedValue xmi:id="_NzGMlpgWEe2zGceU_LAsCg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_NzGMl5gWEe2zGceU_LAsCg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_NzGMmJgWEe2zGceU_LAsCg" name="INT" numericPrecision="10" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_NzGMmZgWEe2zGceU_LAsCg" name="nom_complet" label="nom_complet" length="2000000000" precision="10" sourceType="VARCHAR_0_" talendType="id_String" nullable="false">
+        <taggedValue xmi:id="_NzGMmpgWEe2zGceU_LAsCg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_NzGMm5gWEe2zGceU_LAsCg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_NzGMnJgWEe2zGceU_LAsCg" name="VARCHAR_0_" numericPrecision="10" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_NzGMnZgWEe2zGceU_LAsCg" name="fonction" label="fonction" length="2000000000" precision="10" sourceType="VARCHAR_0_" talendType="id_String" nullable="false">
+        <taggedValue xmi:id="_NzGMnpgWEe2zGceU_LAsCg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_NzGMn5gWEe2zGceU_LAsCg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_NzGMoJgWEe2zGceU_LAsCg" name="VARCHAR_0_" numericPrecision="10" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_NzGMoZgWEe2zGceU_LAsCg" name="salaire_base" label="salaire_base" length="2000000000" precision="10" sourceType="DOUBLE" talendType="id_Double" nullable="false">
+        <taggedValue xmi:id="_NzGMopgWEe2zGceU_LAsCg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_NzGMo5gWEe2zGceU_LAsCg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_NzGMpJgWEe2zGceU_LAsCg" name="DOUBLE" numericPrecision="10" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_NzGMpZgWEe2zGceU_LAsCg" name="cin" label="cin" length="2000000000" precision="10" sourceType="VARCHAR_0_" talendType="id_String" nullable="false">
+        <taggedValue xmi:id="_NzGMppgWEe2zGceU_LAsCg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_NzGMp5gWEe2zGceU_LAsCg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_NzGMqJgWEe2zGceU_LAsCg" name="VARCHAR_0_" numericPrecision="10" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.relational:Schema>
+</xmi:XMI>

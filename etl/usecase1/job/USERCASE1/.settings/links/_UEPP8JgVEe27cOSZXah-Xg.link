@@ -1,0 +1,11 @@
+{
+  "itemId" : "_UEPP8JgVEe27cOSZXah-Xg",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_txawUJn4Ee2-VuM1SCnQjw",
+    "parameterList" : [ {
+      "id" : "_txkhUZn4Ee2-VuM1SCnQjw",
+      "name" : "taux_dir"
+    } ]
+  } ]
+}

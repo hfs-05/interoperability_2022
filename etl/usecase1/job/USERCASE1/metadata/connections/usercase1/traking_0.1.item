@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <TalendMetadata:DatabaseConnection xmi:id="_yutR0JgYEe2zGceU_LAsCg" name="traking" id="_s5MP8JgYEe2zGceU_LAsCg" label="traking" dataPackage="_yvAz0JgYEe2zGceU_LAsCg" DatabaseType="SQLite" DriverClass="org.sqlite.JDBC" URL="jdbc:sqlite://home/abdessamad/project/cours/interoperabilite/2022_2023/tp/user_case1/correction/traking.sqlite" Port="" Username="" Password="" ServerName="" DatasourceName="" FileFieldName="/home/abdessamad/project/cours/interoperabilite/2022_2023/tp/user_case1/correction/traking.sqlite" SID="" SqlSynthax="" StringQuote="" NullChar="" DbmsId="sqlite_id" ProductId="SQLITE" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_yutR0ZgYEe2zGceU_LAsCg" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_yu3C0JgYEe2zGceU_LAsCg" tag="package filter" value=""/>
+    <taggedValue xmi:id="_yu3C0ZgYEe2zGceU_LAsCg" tag="Status" value=""/>
+    <taggedValue xmi:id="_yu3C0pgYEe2zGceU_LAsCg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_yu3C05gYEe2zGceU_LAsCg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_yu3C1JgYEe2zGceU_LAsCg" tag="Description" value=""/>
+    <taggedValue xmi:id="_yu3C1ZgYEe2zGceU_LAsCg" tag="Author" value=""/>
+    <taggedValue xmi:id="_yu3C1pgYEe2zGceU_LAsCg" tag="otherParameter"/>
+    <taggedValue xmi:id="_yu7UQJgYEe2zGceU_LAsCg" tag="DB ProductName" value="SQLite"/>
+    <taggedValue xmi:id="_yu7UQZgYEe2zGceU_LAsCg" tag="DB ProductVersion" value="3.6.3"/>
+    <taggedValue xmi:id="_yu7UQpgYEe2zGceU_LAsCg" tag="DB IdentifierQuoteString" value=" "/>
+    <queries xmi:id="_z5l7IJgZEe2zGceU_LAsCg">
+      <query xmi:id="_z5l7IpgZEe2zGceU_LAsCg" id="_z5l7IZgZEe2zGceU_LAsCg" label="totale_heur_by_agent" value="select cin, &#xA;&#x9;   sum(CASE   &#xA;           WHEN duree_h &lt;= 8  THEN 8 &#xA;           WHEN duree_h >= 12 THEN 12&#xA;&#x9;&#x9;   ELSE duree_h &#xA;       END &#xA;&#x9;   ) sumd, &#xA;&#x9;   strftime('%Y',s.date/1000, 'unixepoch') annee,&#xA;&#x9;   strftime('%m',s.date/1000, 'unixepoch') mois &#xA;&#x9;   from TRAKING s&#xA;   &#xA;GROUP by cin, annee , mois"/>
+    </queries>
+    <parameters xmi:id="_yutR0pgYEe2zGceU_LAsCg" key="CONN_PARA_KEY_USERNAME" value=""/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_yvAz0JgYEe2zGceU_LAsCg" name=" " dataManager="_yutR0JgYEe2zGceU_LAsCg">
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_0EW2IJgYEe2zGceU_LAsCg" name="TRAKING" id="_0EWPEJgYEe2zGceU_LAsCg" label="TRAKING" tableType="TABLE">
+      <feature xsi:type="relational:TdColumn" xmi:id="_0EW2IZgYEe2zGceU_LAsCg" name="id" label="id" length="2000000000" precision="10" sourceType="INT" talendType="id_Integer" nullable="false">
+        <taggedValue xmi:id="_0EW2IpgYEe2zGceU_LAsCg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_0EW2I5gYEe2zGceU_LAsCg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_0EW2JJgYEe2zGceU_LAsCg" name="INT" numericPrecision="10" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_0EW2JZgYEe2zGceU_LAsCg" name="cin" label="cin" length="2000000000" precision="10" sourceType="VARCHAR_0_" talendType="id_String" nullable="false">
+        <taggedValue xmi:id="_0EW2JpgYEe2zGceU_LAsCg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_0EW2J5gYEe2zGceU_LAsCg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_0EW2KJgYEe2zGceU_LAsCg" name="VARCHAR_0_" numericPrecision="10" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_0EW2KZgYEe2zGceU_LAsCg" name="duree_h" label="duree_h" length="2000000000" precision="10" sourceType="INT" talendType="id_Integer" nullable="false">
+        <taggedValue xmi:id="_0EW2KpgYEe2zGceU_LAsCg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_0EW2K5gYEe2zGceU_LAsCg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_0EW2LJgYEe2zGceU_LAsCg" name="INT" numericPrecision="10" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_0EW2LZgYEe2zGceU_LAsCg" name="distance_km" label="distance_km" length="2000000000" precision="10" sourceType="INT" talendType="id_Integer" nullable="false">
+        <taggedValue xmi:id="_0EW2LpgYEe2zGceU_LAsCg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_0EW2L5gYEe2zGceU_LAsCg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_0EW2MJgYEe2zGceU_LAsCg" name="INT" numericPrecision="10" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_0EW2MZgYEe2zGceU_LAsCg" name="date" label="date" length="2000000000" precision="10" sourceType="DATE" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_0EW2MpgYEe2zGceU_LAsCg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_0EW2M5gYEe2zGceU_LAsCg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_0EW2NJgYEe2zGceU_LAsCg" name="DATE" numericPrecision="10" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.relational:Schema>
+</xmi:XMI>

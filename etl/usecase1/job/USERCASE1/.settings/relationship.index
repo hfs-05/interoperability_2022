@@ -1,0 +1,32 @@
+[ {
+  "baseItem" : {
+    "id" : "_UEPP8JgVEe27cOSZXah-Xg",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_txawUJn4Ee2-VuM1SCnQjw",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_EQspQJgWEe2zGceU_LAsCg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_s5MP8JgYEe2zGceU_LAsCg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_s5MP8JgYEe2zGceU_LAsCg - totale_heur_by_agent",
+    "version" : "Latest",
+    "type" : "query"
+  }, {
+    "id" : "_EQspQJgWEe2zGceU_LAsCg - AGENT",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_JWxuEJgdEe2JFvyKUYOmYw - metadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+} ]
